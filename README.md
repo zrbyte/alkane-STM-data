@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ## View Interactive Plots Online
 
-🌐 **[View all interactive visualizations](https://peternemes-incze.github.io/alkane-STM-data/)**
+🌐 **[View all interactive visualizations](https://zrbyte.github.io/alkane-STM-data/)**
 
 All plots are available as interactive HTML files that can be explored directly in your browser.
 

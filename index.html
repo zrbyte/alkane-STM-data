@@ -15,7 +15,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f0f2f5;
             min-height: 100vh;
             padding: 20px;
         }
@@ -30,7 +30,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #667eea;
             color: white;
             padding: 40px;
             text-align: center;
@@ -130,7 +130,7 @@
 
         .plot-card a {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #667eea;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -183,15 +183,19 @@
         <div class="info">
             <h2>About This Dataset</h2>
             <p>This page contains interactive visualizations of STM (Scanning Tunneling Microscopy) spectroscopy data comparing clean vs. alkane-contaminated graphite surfaces.</p>
-            <p><strong>Data Source:</strong> <a href="https://doi.org/10.5281/zenodo.17469441" target="_blank">Zenodo (DOI: 10.5281/zenodo.17469441)</a></p>
-            <p><strong>Repository:</strong> <a href="https://github.com/peternemes-incze/alkane-STM-data" target="_blank">GitHub</a></p>
+            <p><strong>Data Source:</strong> Zenodo (DOI: 10.5281/zenodo.17469441)</p>
+            <p><strong>Repository:</strong> GitHub</p>
         </div>
 
         <div class="content">
             <div class="section">
-                <h2>Figure 1: dI/dV Spectroscopy</h2>
-                <p>Differential conductance (dI/dV) measurements comparing clean and contaminated graphite surfaces.</p>
+                <h2>Figure 1</h2>
                 <div class="plot-grid">
+                    <div class="plot-card">
+                        <h3>Figure 1b–d <span class="badge">Bokeh</span></h3>
+                        <p>dI/dV components (b–d)</p>
+                        <a href="plot_fig1bcd.html">View Plot →</a>
+                    </div>
                     <div class="plot-card">
                         <h3>Figure 1e <span class="badge">Bokeh</span></h3>
                         <p>dI/dV spectroscopy comparison with interactive controls</p>
@@ -206,110 +210,47 @@
             </div>
 
             <div class="section">
-                <h2>Figure 2: I-Z Spectroscopy Histograms</h2>
-                <p>2D histogram analysis of current-distance (I-Z) measurements at different setpoint currents.</p>
+                <h2>Figure 2</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
-                        <h3>Figure 2a <span class="badge">Matplotlib</span></h3>
-                        <p>80 pA setpoint current</p>
-                        <a href="fig2a_80pA.svg">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>Figure 2b <span class="badge">Matplotlib</span></h3>
-                        <p>150 pA setpoint current</p>
-                        <a href="fig2b_150pA.svg">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>Figure 2c <span class="badge">Matplotlib</span></h3>
-                        <p>200 pA setpoint current</p>
-                        <a href="fig2c_200pA.svg">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>Figure 2d <span class="badge">Matplotlib</span></h3>
-                        <p>250 pA setpoint current</p>
-                        <a href="fig2d_250pA.svg">View Plot →</a>
+                        <h3>Figure 2a–d <span class="badge">Matplotlib</span></h3>
+                        <p>2D histograms at multiple setpoints</p>
+                        <a href="plot_fig2a-d.html">View Plot →</a>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Figure 3: I-Z Traces & Conductance Analysis</h2>
-                <p>Individual I-Z approach curves and conductance fluctuation analysis.</p>
+                <h2>Figure 3</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
                         <h3>Figure 3a <span class="badge">Bokeh</span></h3>
                         <p>Individual I-Z traces comparison</p>
-                        <a href="fig3a_iz_traces.html">View Plot →</a>
+                        <a href="plot_fig3a.html">View Plot →</a>
                     </div>
                     <div class="plot-card">
-                        <h3>Figure 3b (2D) <span class="badge">Matplotlib</span></h3>
-                        <p>Conductance fluctuations 2D histogram</p>
-                        <a href="fig3b_conductance_fluct_2d.svg">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>Figure 3b (1D) <span class="badge">Matplotlib</span></h3>
-                        <p>Conductance fluctuations overlay</p>
-                        <a href="fig3b_conductance_hist_overlay.svg">View Plot →</a>
+                        <h3>Figure 3b <span class="badge">Matplotlib</span></h3>
+                        <p>Conductance fluctuations (1D/2D)</p>
+                        <a href="plot_fig3b.html">View Plot →</a>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Figure 4: DFT & Experimental Comparison</h2>
-                <p>Comparison of DFT calculations with experimental I-Z measurements.</p>
+                <h2>Figure 4</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
-                        <h3>DFT: Integrated DOS <span class="badge">Bokeh</span></h3>
-                        <p>Clean vs contaminated comparison</p>
-                        <a href="fig4_dft_decay.html">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>DFT: DOS Decay <span class="badge">Bokeh</span></h3>
-                        <p>Decay rate analysis</p>
-                        <a href="fig4_dft_kappa.html">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>DFT: Clean Schematic <span class="badge">Bokeh</span></h3>
-                        <p>Clean graphene decay (log scale)</p>
-                        <a href="fig4_sch_gr.html">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>DFT: Contaminated Schematic <span class="badge">Bokeh</span></h3>
-                        <p>Contaminated decay (log scale)</p>
-                        <a href="fig4_sch_a.html">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>Experimental: Current <span class="badge">Bokeh</span></h3>
-                        <p>I-Z measurements with error bars</p>
-                        <a href="fig4_exp_decay.html">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>Experimental: Decay Constant <span class="badge">Bokeh</span></h3>
-                        <p>κ analysis with error bars</p>
-                        <a href="fig4_exp_kappa.html">View Plot →</a>
+                        <h3>Figure 4 (Overview) <span class="badge">Bokeh</span></h3>
+                        <p>DFT and experimental comparisons</p>
+                        <a href="plot_fig4.html">View Plot →</a>
                     </div>
                 </div>
             </div>
-
-            <div class="section">
-                <h2>Additional Plots</h2>
-                <div class="plot-grid">
-                    <div class="plot-card">
-                        <h3>I-Z Refactored <span class="badge">Bokeh</span></h3>
-                        <p>Interactive I-Z spectroscopy comparison</p>
-                        <a href="iz_refactored.html">View Plot →</a>
-                    </div>
-                    <div class="plot-card">
-                        <h3>STM Images <span class="badge">Bokeh</span></h3>
-                        <p>Topography images (clean, contaminated, alkane)</p>
-                        <a href="images_refactored.html">View Plot →</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <footer>
-            <p>Generated from Jupyter notebooks | <a href="https://github.com/peternemes-incze/alkane-STM-data" target="_blank">View on GitHub</a></p>
+            <p>Generated from Jupyter notebooks</p>
             <p style="margin-top: 10px; font-size: 0.9em;">Interactive plots powered by Bokeh and HoloViews</p>
         </footer>
     </div>
