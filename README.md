@@ -19,3 +19,4 @@ pip install -r requirements.txt
 The notebooks automatically download required data files from Zenodo if they're missing locally. Simply run all cells.
 
 HTML exports of all notebooks are also supplied.
+To just view the HTML files, please download them (green "Code" button, "Download ZIP").
