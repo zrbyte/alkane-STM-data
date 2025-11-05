@@ -106,14 +106,7 @@
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
-            transition: all 0.3s ease;
             border: 2px solid transparent;
-        }
-
-        .plot-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
-            border-color: #667eea;
         }
 
         .plot-card h3 {
@@ -136,23 +129,9 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
-            transition: all 0.3s ease;
         }
 
-        .plot-card a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            margin-left: 10px;
-        }
+        
 
         footer {
             background: #f8f9fa;
@@ -183,8 +162,8 @@
         <div class="info">
             <h2>About This Dataset</h2>
             <p>This page contains interactive visualizations of STM (Scanning Tunneling Microscopy) spectroscopy data comparing clean vs. alkane-contaminated graphite surfaces.</p>
-            <p><strong>Data Source:</strong> Zenodo (DOI: 10.5281/zenodo.17469441)</p>
-            <p><strong>Repository:</strong> GitHub</p>
+            <p><strong>Data Source:</strong> <a href="https://doi.org/10.5281/zenodo.17469441" target="_blank">Zenodo (DOI: 10.5281/zenodo.17469441)</a></p>
+            <p><strong>Repository:</strong> <a href="https://github.com/peternemes-incze/alkane-STM-data" target="_blank">GitHub</a></p>
         </div>
 
         <div class="content">
@@ -192,19 +171,16 @@
                 <h2>Figure 1</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
-                        <h3>Figure 1b–d <span class="badge">Bokeh</span></h3>
-                        <p>dI/dV components (b–d)</p>
-                        <a href="plot_fig1bcd.html">View Plot →</a>
+                        <h3>Figure 1b–d</h3>
+                        <a href="plot_fig1bcd.html">View notebook and figure</a>
                     </div>
                     <div class="plot-card">
-                        <h3>Figure 1e <span class="badge">Bokeh</span></h3>
-                        <p>dI/dV spectroscopy comparison with interactive controls</p>
-                        <a href="plot_fig1e.html">View Plot →</a>
+                        <h3>Figure 1e</h3>
+                        <a href="plot_fig1e.html">View notebook and figure</a>
                     </div>
                     <div class="plot-card">
-                        <h3>Figure 1f <span class="badge">Bokeh</span></h3>
-                        <p>Extended dI/dV analysis</p>
-                        <a href="plot_fig1f.html">View Plot →</a>
+                        <h3>Figure 1f</h3>
+                        <a href="plot_fig1f.html">View notebook and figure</a>
                     </div>
                 </div>
             </div>
@@ -213,9 +189,8 @@
                 <h2>Figure 2</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
-                        <h3>Figure 2a–d <span class="badge">Matplotlib</span></h3>
-                        <p>2D histograms at multiple setpoints</p>
-                        <a href="plot_fig2a-d.html">View Plot →</a>
+                        <h3>Figure 2a–d</h3>
+                        <a href="plot_fig2a-d.html">View notebook and figure</a>
                     </div>
                 </div>
             </div>
@@ -224,14 +199,12 @@
                 <h2>Figure 3</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
-                        <h3>Figure 3a <span class="badge">Bokeh</span></h3>
-                        <p>Individual I-Z traces comparison</p>
-                        <a href="plot_fig3a.html">View Plot →</a>
+                        <h3>Figure 3a</h3>
+                        <a href="plot_fig3a.html">View notebook and figure</a>
                     </div>
                     <div class="plot-card">
-                        <h3>Figure 3b <span class="badge">Matplotlib</span></h3>
-                        <p>Conductance fluctuations (1D/2D)</p>
-                        <a href="plot_fig3b.html">View Plot →</a>
+                        <h3>Figure 3b</h3>
+                        <a href="plot_fig3b.html">View notebook and figure</a>
                     </div>
                 </div>
             </div>
@@ -240,9 +213,8 @@
                 <h2>Figure 4</h2>
                 <div class="plot-grid">
                     <div class="plot-card">
-                        <h3>Figure 4 (Overview) <span class="badge">Bokeh</span></h3>
-                        <p>DFT and experimental comparisons</p>
-                        <a href="plot_fig4.html">View Plot →</a>
+                        <h3>Figure 4</h3>
+                        <a href="plot_fig4.html">View notebook and figure</a>
                     </div>
                 </div>
             </div>
