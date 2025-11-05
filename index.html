@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkane STM Data - Interactive Visualizations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .info {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .info p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            font-size: 1.8em;
+        }
+
+        .section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .plot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .plot-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .plot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .plot-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .plot-card p {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .plot-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .plot-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alkane STM Data</h1>
+            <p>Interactive Visualizations of STM Spectroscopy Data</p>
+        </header>
+
+        <div class="info">
+            <h2>About This Dataset</h2>
+            <p>This page contains interactive visualizations of STM (Scanning Tunneling Microscopy) spectroscopy data comparing clean vs. alkane-contaminated graphite surfaces.</p>
+            <p><strong>Data Source:</strong> <a href="https://doi.org/10.5281/zenodo.17469441" target="_blank">Zenodo (DOI: 10.5281/zenodo.17469441)</a></p>
+            <p><strong>Repository:</strong> <a href="https://github.com/peternemes-incze/alkane-STM-data" target="_blank">GitHub</a></p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Figure 1: dI/dV Spectroscopy</h2>
+                <p>Differential conductance (dI/dV) measurements comparing clean and contaminated graphite surfaces.</p>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <h3>Figure 1e <span class="badge">Bokeh</span></h3>
+                        <p>dI/dV spectroscopy comparison with interactive controls</p>
+                        <a href="plot_fig1e.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Figure 1f <span class="badge">Bokeh</span></h3>
+                        <p>Extended dI/dV analysis</p>
+                        <a href="plot_fig1f.html">View Plot →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Figure 2: I-Z Spectroscopy Histograms</h2>
+                <p>2D histogram analysis of current-distance (I-Z) measurements at different setpoint currents.</p>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <h3>Figure 2a <span class="badge">Matplotlib</span></h3>
+                        <p>80 pA setpoint current</p>
+                        <a href="fig2a_80pA.svg">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Figure 2b <span class="badge">Matplotlib</span></h3>
+                        <p>150 pA setpoint current</p>
+                        <a href="fig2b_150pA.svg">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Figure 2c <span class="badge">Matplotlib</span></h3>
+                        <p>200 pA setpoint current</p>
+                        <a href="fig2c_200pA.svg">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Figure 2d <span class="badge">Matplotlib</span></h3>
+                        <p>250 pA setpoint current</p>
+                        <a href="fig2d_250pA.svg">View Plot →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Figure 3: I-Z Traces & Conductance Analysis</h2>
+                <p>Individual I-Z approach curves and conductance fluctuation analysis.</p>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <h3>Figure 3a <span class="badge">Bokeh</span></h3>
+                        <p>Individual I-Z traces comparison</p>
+                        <a href="fig3a_iz_traces.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Figure 3b (2D) <span class="badge">Matplotlib</span></h3>
+                        <p>Conductance fluctuations 2D histogram</p>
+                        <a href="fig3b_conductance_fluct_2d.svg">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Figure 3b (1D) <span class="badge">Matplotlib</span></h3>
+                        <p>Conductance fluctuations overlay</p>
+                        <a href="fig3b_conductance_hist_overlay.svg">View Plot →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Figure 4: DFT & Experimental Comparison</h2>
+                <p>Comparison of DFT calculations with experimental I-Z measurements.</p>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <h3>DFT: Integrated DOS <span class="badge">Bokeh</span></h3>
+                        <p>Clean vs contaminated comparison</p>
+                        <a href="fig4_dft_decay.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>DFT: DOS Decay <span class="badge">Bokeh</span></h3>
+                        <p>Decay rate analysis</p>
+                        <a href="fig4_dft_kappa.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>DFT: Clean Schematic <span class="badge">Bokeh</span></h3>
+                        <p>Clean graphene decay (log scale)</p>
+                        <a href="fig4_sch_gr.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>DFT: Contaminated Schematic <span class="badge">Bokeh</span></h3>
+                        <p>Contaminated decay (log scale)</p>
+                        <a href="fig4_sch_a.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Experimental: Current <span class="badge">Bokeh</span></h3>
+                        <p>I-Z measurements with error bars</p>
+                        <a href="fig4_exp_decay.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>Experimental: Decay Constant <span class="badge">Bokeh</span></h3>
+                        <p>κ analysis with error bars</p>
+                        <a href="fig4_exp_kappa.html">View Plot →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Additional Plots</h2>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <h3>I-Z Refactored <span class="badge">Bokeh</span></h3>
+                        <p>Interactive I-Z spectroscopy comparison</p>
+                        <a href="iz_refactored.html">View Plot →</a>
+                    </div>
+                    <div class="plot-card">
+                        <h3>STM Images <span class="badge">Bokeh</span></h3>
+                        <p>Topography images (clean, contaminated, alkane)</p>
+                        <a href="images_refactored.html">View Plot →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Generated from Jupyter notebooks | <a href="https://github.com/peternemes-incze/alkane-STM-data" target="_blank">View on GitHub</a></p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Interactive plots powered by Bokeh and HoloViews</p>
+        </footer>
+    </div>
+</body>
+</html>

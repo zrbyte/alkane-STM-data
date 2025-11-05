@@ -14,9 +14,15 @@ Install required packages quickly by:
 pip install -r requirements.txt
 ```
 
+## View Interactive Plots Online
+
+🌐 **[View all interactive visualizations](https://peternemes-incze.github.io/alkane-STM-data/)**
+
+All plots are available as interactive HTML files that can be explored directly in your browser.
+
 ## Usage
 
 The notebooks automatically download required data files from Zenodo if they're missing locally. Simply run all cells.
 
-HTML exports of all notebooks are also supplied.
-To just view the HTML files, please download them (green "Code" button, "Download ZIP").
+HTML exports of all notebooks are also supplied in the repository.
+To just view the HTML files locally, download them (green "Code" button, "Download ZIP").
