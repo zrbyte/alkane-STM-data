@@ -1,5 +1,5 @@
 # Data processing Python notebooks
-For the paper: ...
+For the paper: György, K. et al. [Revealing the impact of ambient molecular contamination on scanning tunneling microscopy and spectroscopy of layered materials.](https://arxiv.org/abs/2511.04257) arXiv (2025) doi:10.48550/arXiv.2511.04257.
 
 Jupyter notebooks for visualizing STM (Scanning Tunneling Microscopy) spectroscopy data published on Zenodo: https://doi.org/10.5281/zenodo.17469441
 
